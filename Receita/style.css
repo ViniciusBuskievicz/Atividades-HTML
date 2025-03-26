@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #ce987e;
+    color: #f2eee7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: #8d4040;
+    text-align: center;   
+    font-size: 18px;
+    padding: 24px;
+}
+
+.grid{
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.imagens{
+    width: 430px;
+    height: 300px;
+}
+.receita{
+    color: #393f50;
+    align-items: center;
+    background-color: #e6dbac;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #393f50;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 450px;
+    max-height: 320px;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+.receita:hover{
+    transform: scale(1.05);
+    transition: max-height 1.5s ease;
+    max-height: 1000px;
+}
+.receita h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.receita h3{
+    text-align: left;
+    padding: 5px;
+}
+.receita:nth-child(1)>h3::before {
+    content: "🧀"
+}
+.receita:nth-child(1)>h3::after {
+    content: "🧀";
+}
+.receita:nth-child(2)>h3::before {
+    content: "🍞";
+}
+.receita:nth-child(2)>h3::after {
+    content: "🍞";
+}
+.receita:nth-child(3)>h3::before {
+    content: "🥟";
+}
+.receita:nth-child(3)>h3::after {
+    content: "🥟";
+}
+.receita:nth-child(4)>h3::before {
+    content: "🥩";
+}
+.receita:nth-child(4)>h3::after {
+    content: "🥩";
+}
+.receita:nth-child(5)>h3::before {
+    content: "🥖";
+}
+.receita:nth-child(5)>h3::after {
+    content: "🥖";
+}
+.receita:nth-child(6)>h3::before {
+    content: "🧈";
+}
+.receita:nth-child(6)>h3::after {
+    content: "🧈";
+}
+
+ul li {
+    margin-left: 20px;
+    padding: 3px;
+}
+ol li{
+    margin-left: 20px;
+    padding: 3px;
+}
+@media (max-width: 1368px){
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 968px){
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
