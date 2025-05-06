@@ -50,14 +50,8 @@ for (let item of carrinho) {
     totalCompra += item.preco;
 }
 
-// Verificando se o cliente pode pagar
-if (totalCompra > saldo) {
-    console.log("Saldo insuficiente!");
-    console.log(`Total da compra: R$${totalCompra.toFixed(2)}`);
-    console.log(`Saldo disponível: R$${saldo.toFixed(2)}`);
-} else {
-    console.log("Compra realizada com sucesso!");
-    saldo -= totalCompra;
-    console.log(`Total da compra: R$${totalCompra.toFixed(2)}`);
-    console.log(`Saldo restante: R$${saldo.toFixed(2)}`);
-}
+// Verificando se o cliente pode pagar usando operador ternário
+totalCompra > saldo
+    ? console.log(`Saldo insuficiente!\nTotal da compra: R$${totalCompra.toFixed(2)}\nSaldo disponível: R$${saldo.toFixed(2)}`)
+    : (saldo -= totalCompra,
+       console.log(`Compra realizada com sucesso!\nTotal da compra: R$${totalCompra.toFixed(2)}\nSaldo restante: R$${saldo.toFixed(2)}`));
